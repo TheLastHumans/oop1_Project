@@ -1,3 +1,5 @@
 public class MainProgram {
-    //text
+    static void main(String[] args){
+
+    }
 }
