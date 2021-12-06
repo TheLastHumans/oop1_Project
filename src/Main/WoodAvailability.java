@@ -132,12 +132,12 @@ public class WoodAvailability {
   }
   
   public double Price(int area, String woodType){
-      int counter = 0;
       double price = 0;
-        for(String wood : WoodStorage){
-            if(woodType.equals(wood)){
-                int index = Arrays.binarySearch(WoodStorage, wood);
-                switch(index){
+        for(int i = 0; i < WoodStorage.length; i++){
+            
+            if(woodType.equals(WoodStorage[i])){
+                
+                switch(i){
                     
                     case 0:                
                         price = area * cherryInchPrice;                    
@@ -182,7 +182,6 @@ public class WoodAvailability {
                         break;
                 }
             }
-            counter++;
         }
      return price;   
   }
@@ -231,5 +230,6 @@ public class WoodAvailability {
         }
       }
   }*/
+  
   
 }
