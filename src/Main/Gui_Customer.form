@@ -58,7 +58,7 @@
           <text value="Width"/>
         </properties>
       </component>
-      <component id="d0654" class="javax.swing.JTextField" binding="TF_width">
+      <component id="d0654" class="javax.swing.JTextField" binding="TF_width" custom-create="true">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -68,7 +68,7 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="52288" class="javax.swing.JTextField" binding="TF_height">
+      <component id="52288" class="javax.swing.JTextField" binding="TF_height" custom-create="true">
         <constraints>
           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>

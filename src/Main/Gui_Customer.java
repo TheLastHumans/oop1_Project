@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
+import java.util.concurrent.TimeUnit;
 
 public class Gui_Customer extends JFrame {
     private JPanel P_Customer;
@@ -37,12 +38,22 @@ public class Gui_Customer extends JFrame {
                 System.out.println("Index Selected: " + index);
                 String s = (String) WoodTypeList.getSelectedValue();
                 System.out.println("Value Selected: " + s);
-                String GUI_height=TF_height.getName();
-                String GUI_width= TF_width.getName();
-                int GUI_height_int = Integer.parseInt(GUI_height);
-                int GUI_width_int = Integer.parseInt(GUI_width);
+                String GUI_height=TF_height.getText();
+                String GUI_width= TF_width.getText();
+                System.out.println(GUI_height + GUI_width);
 
-                //JOptionPane.showMessageDialog();
+                if (GUI_height == null || GUI_width == null || s == null){
+                    JOptionPane.showMessageDialog(P_Customer,"Wrong selection \nPlease enter Height Width And Wood Type ");
+                }
+                else{
+                    int GUI_height_int = Integer.valueOf(GUI_height);
+                    int GUI_width_int = Integer.parseInt(GUI_width);
+                    int GUI_area_Int = GUI_width_int=GUI_height_int;
+                    JOptionPane.showMessageDialog(P_Customer,"Your order is :"+"\n Wood type : "
+                            +s+"\n Table area is : "+GUI_area_Int+"\n The price is : "+" Price here"+"\n Your tracking number is : "+
+                            " Tracking Number");
+                }
+
             }
         });
     }
@@ -51,6 +62,8 @@ public class Gui_Customer extends JFrame {
 
         String[] WoodType = {"cherry", "oak", "walnut", "maple", "pine", "akasa", "teak", "poplar", "redwood", "beech"};
         WoodTypeList = new JList(WoodType);
+        TF_height= new JTextField();
+        TF_width= new JTextField();
         // TODO: place custom component creation code here
     }
 }
