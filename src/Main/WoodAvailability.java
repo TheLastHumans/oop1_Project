@@ -1,20 +1,35 @@
 package Main;
 
 public class WoodAvailability {
-        
+      
     String[] WoodStorage = {"Cherry", "Oak", "Walnut", 
        "Maple", "Pine", "Cedar", 
        "Ash", "Bamboo", "Akasa", 
        "Teak", "Poplar", "Redwood", 
        "Beech"};
-        
-    public static final double inchPrice = 0.44;
-        
+    
+    public static final double cherryInchPrice = 0.44;
+    public static final double oakInchPrice = 0.30;
+    public static final double walnutInchPrice = 0.74;
+    public static final double mapleInchPrice = 0.41;
+    public static final double pineInchPrice = 0.54;
+    public static final double cedarInchPrice = 0.24;
+    public static final double ashInchPrice = 0.94;
+    public static final double bambooInchPrice = 0.82;
+    public static final double akasaInchPrice = 0.90;
+    public static final double teakInchPrice = 0.96;
+    public static final double poplarInchPrice = 1.00;
+    public static final double redwoodInchPrice = 0.60;
+    public static final double beechInchPrice = 0.78;
+    
     private int cherryAmount = 5;
     private int oakAmount = 5;
     private int walnutAmount = 5;
     private int mapleAmount = 5;
     private int pineAmount = 5;
+    private int cedarAmount = 5;
+    private int ashAmount = 5;
+    private int bambooAmount = 5;
     private int akasaAmount = 5;
     private int teakAmount = 5;
     private int poplarAmount = 5;
@@ -53,26 +68,41 @@ public class WoodAvailability {
                        }
                        break;
                    case 5:
-                       if(akasaAmount == 0){
+                       if(cedarAmount == 0){
                            return false;
                        }
                        break;    
                    case 6:
-                       if(teakAmount == 0){
+                       if(ashAmount == 0){
                            return false;
                        }
                        break;
                    case 7:
-                       if(poplarAmount == 0){
+                       if(bambooAmount == 0){
                            return false;
                        }
                        break;
                    case 8:
-                       if(redwoodAmount == 0){
+                       if(akasaAmount == 0){
                            return false;
                        }
                        break;
                    case 9:
+                       if(teakAmount == 0){
+                           return false;
+                       }
+                       break;
+                   case 10:
+                       if(poplarAmount == 0){
+                           return false;
+                       }
+                       break;
+                   case 11:
+                       if(redwoodAmount == 0){
+                           return false;
+                       }
+                       break;
+                   case 12:
                        if(beechAmount == 0){
                            return false;
                        }
@@ -98,6 +128,61 @@ public class WoodAvailability {
      }     
   }
   
+  public double Price(int area, String woodType){
+      int counter = 0;
+      double price = 0;
+        for(String wood : WoodStorage){
+            if(woodType.equals(wood)){
+                int index = Arrays.binarySearch(WoodStorage, wood);
+                switch(index){
+                    
+                    case 0:                
+                        price = area * cherryInchPrice;                    
+                        break;
+                    case 1:
+                        price = area * oakInchPrice;
+                        break;
+                    case 2:
+                        price = area * walnutInchPrice;
+                        break;
+                    case 3: 
+                        price = area * mapleInchPrice;
+                        break;
+                    case 4: 
+                        price = area * pineInchPrice;
+                        break;
+                    case 5:
+                        price = area * cedarInchPrice;
+                        break;
+                    case 6: 
+                        price = area * ashInchPrice;
+                        break;
+                    case 7:
+                        price = area * bambooInchPrice;
+                        break;
+                    case 8:
+                        price = area * akasaInchPrice;
+                        break;
+                    case 9: 
+                        price = area * teakInchPrice;
+                        break;
+                    case 10:
+                        price = area * poplarInchPrice;
+                        break;
+                    case 11:
+                        price = area * redwoodInchPrice;
+                        break;
+                    case 12:
+                        price = area * beechInchPrice;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            counter++;
+        }
+     return price;   
+  }
   /*private void WoodAmountUpdate(Ordering user, String order){
       if(user.Verify() == true)
       {
@@ -143,4 +228,5 @@ public class WoodAvailability {
         }
       }
   }*/
+  
 }
