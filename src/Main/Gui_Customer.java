@@ -23,14 +23,12 @@ public class Gui_Customer extends JFrame {
         setSize(640, 480);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(false);
-
         P_Customer.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
                 super.componentResized(e);
             }
         });
-
         buyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -52,8 +50,9 @@ public class Gui_Customer extends JFrame {
                     WoodAvailability woodAvailability = new WoodAvailability();
                     //woodAvailability.Price(GUI_area_Int, s);
 
+
                     JOptionPane.showMessageDialog(P_Customer,"Your order is :"+"\n Wood type : "
-                            +s+"\n Table area is : "+GUI_area_Int+"\n The price is : "+woodAvailability.Price(GUI_area_Int,s)+"\n Your tracking number is : "+
+                            +s+"\n Table area is : "+GUI_area_Int+"\n The price is : "+woodAvailability.Price(GUI_area_Int,s)+" Sar"+"\n Your tracking number is : "+
                             " Tracking Number");
                 }
 
