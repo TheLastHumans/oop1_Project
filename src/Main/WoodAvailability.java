@@ -1,5 +1,8 @@
 package Main;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class WoodAvailability {
       
     String[] WoodStorage = {"Cherry", "Oak", "Walnut", 
