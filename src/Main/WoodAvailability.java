@@ -7,7 +7,9 @@ public class WoodAvailability {
        "Ash", "Bamboo", "Akasa", 
        "Teak", "Poplar", "Redwood", 
        "Beech"};
-    
+        
+    public static final double inchPrice = 0.44;
+        
     private int cherryAmount = 5;
     private int oakAmount = 5;
     private int walnutAmount = 5;
