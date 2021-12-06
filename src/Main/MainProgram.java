@@ -1,7 +1,11 @@
 package Main;
 import java.util.Scanner;
+
 public class MainProgram {
-    public static void main(String[] args) {
+    public static void main(String[] args){
+        AppGUI GUI_TEST = new AppGUI();
+
+        /*
         Scanner Input = new Scanner(System.in);
         int Login_Input = 0;
         while (true) {
@@ -17,7 +21,10 @@ public class MainProgram {
             }//If Login 2
             else {
                 System.out.println("Wrong Input");
+
             }//else Login
         }//While Main
+
+         */
     }//Main Class
 }//MainProgram
