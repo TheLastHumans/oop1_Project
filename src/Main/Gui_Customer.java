@@ -49,8 +49,11 @@ public class Gui_Customer extends JFrame {
                     int GUI_height_int = Integer.valueOf(GUI_height);
                     int GUI_width_int = Integer.parseInt(GUI_width);
                     int GUI_area_Int = GUI_width_int=GUI_height_int;
+                    WoodAvailability woodAvailability = new WoodAvailability();
+                    //woodAvailability.Price(GUI_area_Int, s);
+
                     JOptionPane.showMessageDialog(P_Customer,"Your order is :"+"\n Wood type : "
-                            +s+"\n Table area is : "+GUI_area_Int+"\n The price is : "+" Price here"+"\n Your tracking number is : "+
+                            +s+"\n Table area is : "+GUI_area_Int+"\n The price is : "+woodAvailability.Price(GUI_area_Int,s)+"\n Your tracking number is : "+
                             " Tracking Number");
                 }
 
@@ -59,8 +62,9 @@ public class Gui_Customer extends JFrame {
     }
 
     private void createUIComponents() {
-
-        String[] WoodType = {"cherry", "oak", "walnut", "maple", "pine", "akasa", "teak", "poplar", "redwood", "beech"};
+        WoodAvailability woodAvailability = new WoodAvailability();
+        String[] WoodType = woodAvailability.WoodStorage ;
+        //{"Cherry", "Oak", "Walnut", "Maple", "Pine", "Akasa", "Teak", "Poplar", "Redwood", "Beech"}
         WoodTypeList = new JList(WoodType);
         TF_height= new JTextField();
         TF_width= new JTextField();
