@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class MainProgram {
     public static void main(String[] args){
         AppGUI GUI_TEST = new AppGUI();
-
         /*
         Scanner Input = new Scanner(System.in);
         int Login_Input = 0;
