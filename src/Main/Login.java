@@ -6,18 +6,6 @@ public class Login {
 
     public static ArrayList<User> usersArr = new ArrayList<User>();
 
-    public static boolean login() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Please Enter Your Username : ");
-        String username = scanner.next();
-        System.out.print("Please Enter Your Password : ");
-        String password = scanner.next();
-
-        int index = login(username, password);
-        return login(index);
-
-    }
 
     public static boolean login(int index) {
 
