@@ -20,10 +20,8 @@ public class MainProgram {
             }//If Login 2
             else {
                 System.out.println("Wrong Input");
-
             }//else Login
         }//While Main
-
          */
     }//Main Class
 }//MainProgram
