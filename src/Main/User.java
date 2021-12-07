@@ -1,14 +1,15 @@
 package src.Main;
+
 public class User {
 
     public String username;
     public String password;
-    public String ID ; 
+    public String ID;
 
-    public User(String username, String password , String ID) {
+    public User(String username, char[] password, String ID) {
         this.username = username;
-        this.password = password;
-        this.ID = ID; 
+        this.password = convertCharArrToString(password);
+        this.ID = ID;
     }
 
     public String getUsername() {
@@ -19,8 +20,17 @@ public class User {
         return this.password;
     }
 
-    public String getID(){
-        return this.ID ; 
+    public String getID() {
+        return this.ID;
+    }
+
+    public static String convertCharArrToString(char[] arr) {
+        String str = "";
+        for (int i = 0; i < arr.length; i++) {
+            str += arr[i] + "";
+        }
+
+        return str;
     }
 
 }

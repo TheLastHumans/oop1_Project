@@ -1,5 +1,7 @@
 package src.Main;
+
 import java.util.*;
+
 public class Login {
 
     public static ArrayList<User> usersArr = new ArrayList<User>();
@@ -14,16 +16,6 @@ public class Login {
 
         int index = login(username, password);
         return login(index);
-
-    }
-
-    public static void main(String[] args) {
-
-        usersArr.add(new User("Ahmad", "1234", "1122")); // index = 0
-        usersArr.add(new User("Majid", "4321", "2211")); // index = 1
-        usersArr.add(new User("Faisal", "4545", "4242")); // index = 2
-        usersArr.add(new User("Khalid", "1010", "3232")); // index = 3
-        // ! not Found = -1
 
     }
 
