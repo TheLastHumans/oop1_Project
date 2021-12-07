@@ -27,15 +27,15 @@ public class AppGUI extends JFrame{
                 //System.out.println(GUI_Password + GUI_Username);
                 String GUI_Password_String = new String(GUI_Password);
                 Login login = new Login();
-                Login.login(Login.login(GUI_Username,GUI_Password_String));
-
-                if (true){
+                //Login.login(Login.login(GUI_Username,GUI_Password_String));
+                //System.out.println(Login.login(Login.login(GUI_Username,GUI_Password_String)));
+                if (Login.login(Login.login(GUI_Username,GUI_Password_String))==true){
                     JOptionPane.showMessageDialog(panel_main,"logged in successfully");
                     Gui_Login guiLogin = new Gui_Login();
                     guiLogin.setVisible(true);
                     setVisible(false);
                 }
-                else if (false){
+                else if (Login.login(Login.login(GUI_Username,GUI_Password_String))==false){
                     JOptionPane.showMessageDialog(panel_main,"wrong credentials");
 
                 }
