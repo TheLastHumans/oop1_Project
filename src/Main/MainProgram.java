@@ -3,6 +3,13 @@ import java.util.Scanner;
 
 public class MainProgram {
     public static void main(String[] args){
+ 
+        Login.usersArr.add(new User("Ahmad",  new char[] {'1' , '2' ,'3' ,'4'} , "1122")); // index = 0
+        Login.usersArr.add(new User("Majid",  new char[] {'4' ,'3' , '2' ,'1'} , "2211")); // index = 1
+        Login.usersArr.add(new User("Faisal", new char[] {'5' , '6' ,'7' , '8'}, "4242")); // index = 2
+        Login.usersArr.add(new User("Khalid", new char[] {'1' , '3' , '5' , '6'}, "3232")); // index = 3
+        // ! not Found = -1
+
         AppGUI GUI_TEST = new AppGUI();
         /*
         Scanner Input = new Scanner(System.in);

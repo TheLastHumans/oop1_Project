@@ -5,8 +5,7 @@ import java.util.*;
 public class Login {
 
     public static ArrayList<User> usersArr = new ArrayList<User>();
-
-
+    
     public static boolean login(int index) {
 
         if (0 <= index && index < usersArr.size())
@@ -28,3 +27,5 @@ public class Login {
     }
 
 }
+
+
