@@ -1,46 +1,50 @@
-package Main;
-/*
+package src.Main;
 import java.util.*;
 public class Login {
-   
-    private String username;
-    private String password;
-    private String ID ; 
-    
-    public static int login(){
-        try (Scanner scanner = new Scanner(System.in)) {
-            System.out.print("Please Enter Your Username : ");
-            String username = scanner.next(); 
-            System.out.print("Please Enter Your Password : ");
-            String password =  scanner.next() ;
 
-        }
-        return 0; 
-
-    }
     public static ArrayList<User> usersArr = new ArrayList<User>();
 
-    public static void login(String[] args) {
+    public static boolean login() {
+        Scanner scanner = new Scanner(System.in);
 
-        usersArr.add(new User("Ahmad", "1234", "1")); 
-        usersArr.add(new User("Majid", "4321", "2")); 
-        usersArr.add(new User("Faisal", "4545", "3")); 
-        usersArr.add(new User("Khalid", "1010", "4")); 
-       
-    } 
+        System.out.print("Please Enter Your Username : ");
+        String username = scanner.next();
+        System.out.print("Please Enter Your Password : ");
+        String password = scanner.next();
 
-    public static boolean login(String username, String password) {
+        int index = login(username, password);
+        return login(index);
 
-        for (int i = 0; i < usersArr.size(); i++) {
-         if (usersArr.get(i).getUsername().equalsIgnoreCase(username)
-                    && usersArr.get(i).getPassword().equals(password)) {
-                return true;
-            }
-        }
-        
-        return false;
     }
 
+    public static void main(String[] args) {
+
+        usersArr.add(new User("Ahmad", "1234", "1122")); // index = 0
+        usersArr.add(new User("Majid", "4321", "2211")); // index = 1
+        usersArr.add(new User("Faisal", "4545", "4242")); // index = 2
+        usersArr.add(new User("Khalid", "1010", "3232")); // index = 3
+        // ! not Found = -1
+
+    }
+
+    public static boolean login(int index) {
+
+        if (0 <= index && index < usersArr.size())
+            return true;
+        return false;
+
+    }
+
+    public static int login(String username, String password) {
+
+        for (int i = 0; i < usersArr.size(); i++) {
+            if (usersArr.get(i).getUsername().equalsIgnoreCase(username)
+                    && usersArr.get(i).getPassword().equals(password)) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
 
 }
-*/
