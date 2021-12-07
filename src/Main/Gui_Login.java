@@ -1,11 +1,13 @@
 package Main;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Gui_Login extends JFrame {
     private JPanel P_login;
     private JList list1;
-    private JButton button1;
+    private JButton checkButton;
     private JLabel label1;
 
     public Gui_Login() {
@@ -14,6 +16,22 @@ public class Gui_Login extends JFrame {
         setSize(640,480);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(false);
+        checkButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                WoodAvailability woodAvailability = new WoodAvailability();
+                int index = list1.getSelectedIndex();
+                //System.out.println("Index Selected: " + index);
+                String WoodString = (String) list1.getSelectedValue();
+                //woodAvailability.IsAvailable(WoodString);
+                if (woodAvailability.IsAvailable(WoodString)==true){
+                    label1.setText("Yes");
+                }
+                else if(woodAvailability.IsAvailable(WoodString)==false){
+                    label1.setText("Not Available");
+                }
+            }
+        });
     }
 
     private void createUIComponents() {
