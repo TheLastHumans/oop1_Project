@@ -33,12 +33,12 @@ public class Gui_Customer extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int index = WoodTypeList.getSelectedIndex();
-                System.out.println("Index Selected: " + index);
+                //System.out.println("Index Selected: " + index);
                 String s = (String) WoodTypeList.getSelectedValue();
-                System.out.println("Value Selected: " + s);
+                //System.out.println("Value Selected: " + s);
                 String GUI_height=TF_height.getText();
                 String GUI_width= TF_width.getText();
-                System.out.println(GUI_height + GUI_width);
+                //System.out.println(GUI_height + GUI_width);
 
                 if (GUI_height == null || GUI_width == null || s == null){
                     JOptionPane.showMessageDialog(P_Customer,"Wrong selection \nPlease enter Height Width And Wood Type ");
