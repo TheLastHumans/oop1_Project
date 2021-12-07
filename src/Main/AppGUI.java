@@ -25,6 +25,7 @@ public class AppGUI extends JFrame{
                 String GUI_Username=TF_Name.getText();
                 char[] GUI_Password=PS_Password.getPassword();
                 //System.out.println(GUI_Password + GUI_Username);
+
                 if (true){
                     JOptionPane.showMessageDialog(panel_main,"logged in successfully");
                     Gui_Login guiLogin = new Gui_Login();
