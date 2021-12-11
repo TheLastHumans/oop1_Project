@@ -16,6 +16,7 @@ public class Gui_Customer extends JFrame {
     private JTextField TF_height;
     private JLabel LB_width;
     private JLabel LB_height;
+    private JTextField TF_refund;
 
     public Gui_Customer() {
         setContentPane(P_Customer);
@@ -49,13 +50,26 @@ public class Gui_Customer extends JFrame {
                     int GUI_area_Int = GUI_width_int=GUI_height_int;
                     WoodAvailability woodAvailability = new WoodAvailability();
                     //woodAvailability.Price(GUI_area_Int, s);
-
-
+                    Ordering ordering = new Ordering();
+                    ordering.setOrders_Int();
                     JOptionPane.showMessageDialog(P_Customer,"Your order is :"+"\n Wood type : "
-                            +s+"\n Table area is : "+GUI_area_Int+"\n The price is : "+woodAvailability.Price(GUI_area_Int,s)+" Sar"+"\n Your tracking number is : "+
-                            " Tracking Number");
+                            +s+"\n Table area is : "+GUI_area_Int+"\n The price is : "+woodAvailability.Price(GUI_area_Int,s)+" Sar"
+                                    +"\n Your tracking number is : " +ordering.Ordering()
+                            );
                 }
 
+            }
+        });
+        RefundButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Ordering ordering = new Ordering();
+                ordering.getOrders_Int();
+                refund Refund = new refund() ;
+                String refund_string = TF_refund.getText();
+                int refund = Integer.parseInt(refund_string);
+                Refund.return_item(ordering.getOrders_Int(),refund);
+                JOptionPane.showMessageDialog(P_Customer,"Your order number : " + refund +" has been returned take a screen shot of this as proof");
             }
         });
     }
@@ -67,6 +81,7 @@ public class Gui_Customer extends JFrame {
         WoodTypeList = new JList(WoodType);
         TF_height= new JTextField();
         TF_width= new JTextField();
+        TF_refund=new JTextField();
         // TODO: place custom component creation code here
     }
 }
