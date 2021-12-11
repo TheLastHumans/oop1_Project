@@ -185,9 +185,8 @@ public class WoodAvailability {
         }
      return price;   
   }
-  /*private void WoodAmountUpdate(Ordering user, String order){
-      if(user.Verify() == true)
-      {
+  public void WoodAmountUpdate(String order){
+      //if(user.Verify() == true){
           for(int i = 0; i < WoodStorage.length; i++){
                
            if(order == WoodStorage[i]){
@@ -229,7 +228,7 @@ public class WoodAvailability {
                
         }
       }
-  }*/
+  }
   
   
-}
+//}

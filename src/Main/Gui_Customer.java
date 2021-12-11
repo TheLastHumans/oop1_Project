@@ -51,6 +51,7 @@ public class Gui_Customer extends JFrame {
                     WoodAvailability woodAvailability = new WoodAvailability();
                     //woodAvailability.Price(GUI_area_Int, s);
                     Ordering ordering = new Ordering();
+                    woodAvailability.WoodAmountUpdate(s);
                     ordering.setOrders_Int();
                     JOptionPane.showMessageDialog(P_Customer,"Your order is :"+"\n Wood type : "
                             +s+"\n Table area is : "+GUI_area_Int+"\n The price is : "+woodAvailability.Price(GUI_area_Int,s)+" Sar"
